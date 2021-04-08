@@ -1,0 +1,3 @@
+<div class="index-sidebar">
+    #parse("/gui/index/sidebar/amount-due.vm")
+</div>

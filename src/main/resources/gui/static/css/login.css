@@ -1,0 +1,22 @@
+.login-form input[type="submit"] {
+    background: none;
+    padding: 5px 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.login-form input[type="password"], .login-form input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+input {
+    margin-bottom: 50px;
+    font-family: inherit;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 12px;
+}

@@ -1,0 +1,14 @@
+#parse("/gui/base.vm")
+#@mainLayout()
+<h1>Payment Confirmed!</h1>
+<span>You can now return to the <a href="/">Home Page</a>. Enjoy your food :)</span><br><br>
+#if($change)
+<span>Here is your change:</span>
+    <ul>
+        #foreach($noteValue in $change.keySet())
+           <li>$$noteValue x$change.get($noteValue)</li>
+        #end
+
+    </ul>
+#end
+#end

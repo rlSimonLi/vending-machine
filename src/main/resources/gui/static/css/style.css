@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: "Microsoft YaHei UI", "Segoe UI", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 900px;
+}
+
+main {
+    max-width: 1920px;
+    margin: auto;
+}
+
+.main-wrapper {
+    flex: 2 0 auto;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-content {
+    padding: 40px;
+}
+
+.main-content > h1 {
+    margin-top: 0;
+}
+
+.right {
+    float: right;
+}
+
+.hover_opacity {
+    transition: opacity .3s;
+}
+
+.hover_opacity:hover {
+    opacity: .6;
+    transition: opacity .3s;
+
+}
+
+.error-message {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dc3545;
+    background-color: #e77681;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.success-message {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #2a6338;
+    background-color: #419957;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    border-radius: 5px;
+    margin: 10px 0;
+}

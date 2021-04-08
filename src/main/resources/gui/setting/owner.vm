@@ -1,0 +1,43 @@
+#parse("/gui/base.vm")
+#@mainLayout()
+<h1>Owner Control Panel</h1><br>
+<button onclick="location.href='/setting/cashier'" class="hover_opacity">Banknote Setting</button>
+<button onclick="location.href='/setting/seller'" class="hover_opacity" style="margin-left: 10px;">Inventory Setting</button>
+<br><br><br>
+<form action="" method="post" class="owner-register-form">
+    <label>Username</label><br>
+    <input type="text" name="username" placeholder="username" value="" maxlength="15" required>
+    <br>
+    <label>Password</label><br>
+    <input type="password" name="password" placeholder="password" value="" minlength="8" maxlength="35" required>
+    <br>
+    <label>User Group:</label><br>
+    <select name="user_group" id="user_group_select">
+        <option value="3">Seller</option>
+        <option value="2">Cashier</option>
+        <option value="1">Owner</option>
+    </select>
+    <br>
+    <input type="submit" value="Register" class="hover_opacity">
+</form>
+<table>
+    <thead>
+    <tr>
+        <th style="width: 15%">Username</th>
+        <th style="width: 15%">User Group<br></th>
+        <th style="width: 70%">Action<br></th>
+    </tr>
+    </thead>
+    <tbody>
+        #foreach($user in $users)
+        <tr>
+            <td>$user.getName()</td>
+            <td>$user.getUserGroupName()</td>
+            <td>
+                <button onclick="location.href='/deleteuser/$user.getName()'" class="hover_opacity">Delete</button>
+            </td>
+        </tr>
+        #end
+    </tbody>
+</table>
+#end

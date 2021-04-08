@@ -1,0 +1,8 @@
+<div class="sidebar-section purchase-history">
+    <h2>Purchase History</h2>
+    #if($currentUser && $currentUser.getUserGroup() != $USERGROUP_CUSTOMER)
+        <span class="sidebar-message">Purchase history is not available for your user group. Please logout to proceed as anonymous user or login with customer account.</span>
+    #else
+        <span>Purchase history coming soon</span>
+    #end
+</div>

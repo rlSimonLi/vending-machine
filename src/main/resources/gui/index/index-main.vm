@@ -1,0 +1,35 @@
+<div class="index-main">
+    #foreach($category in $products.keySet())
+        <div class="category-section">
+            <h2>$category</h2>
+            #foreach($product in $products.get($category))
+                <div class="item-section">
+                    <div class="item-description">
+                        <span class="item-name">$product.getName()</span><br>
+                        <span class="item-price">$$product.getPriceString()</span>
+                    </div>
+                    <div class="item-stock">
+                        #if($product.getStock() == 0)
+                            <span>Out of Stock</span><br>
+                            <span>0</span>
+                        #else
+                            <span>In Stock</span><br>
+                            <span>$product.getStock()</span>
+                        #end
+                    </div>
+                    <div class="item-selection">
+                        #if($product.getStock() == 0)
+                            <input class="item-quantity-input" type="number" value=0
+                                   name=$product.getProductId() price=$product.getPrice() onchange="updateOrderTotal()"
+                                   disabled>
+                        #else
+                            <input class="item-quantity-input" type="number" min=0 max=$product.getStock() value=0
+                                   name=$product.getProductId() price=$product.getPrice() onchange="updateOrderTotal()">
+                        #end
+                    </div>
+                </div>
+            #end
+        </div>
+        <br>
+    #end
+</div>

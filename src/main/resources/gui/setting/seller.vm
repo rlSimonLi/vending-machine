@@ -1,0 +1,33 @@
+#parse("/gui/base.vm")
+#@mainLayout()
+<h1>Seller Control Panel</h1>
+<form action="" method="post" class="stock-form">
+    #foreach($product in $products)
+        <h3>$product.getName() (ID: $product.getProductId())</h3>
+        <div class="stock-item-row">
+            <div class="stock-item-col">
+                <label for="">Name</label><br>
+                <input type="text" value="$product.getName()" style="text-align: left" name="$product.getProductId()-name">
+            </div>
+            <div class="stock-item-col">
+                <label for="">Category</label><br>
+                <select id="category" name="$product.getProductId()-category">
+                    <option value="1" #if($product.getCategoryId() == 1) selected #end>Drink</option>
+                    <option value="2" #if($product.getCategoryId() == 2) selected #end>Chocolate</option>
+                    <option value="3" #if($product.getCategoryId() == 3) selected #end>Chips</option>
+                    <option value="4" #if($product.getCategoryId() == 4) selected #end>Candy</option>
+                </select>
+            </div>
+            <div class="stock-item-col">
+                <label for="">Stock</label><br>
+                <input type="number" value="$product.getStock()" max="15" min="0" name="$product.getProductId()-stock">
+            </div>
+            <div class="stock-item-col">
+                <label for="">Price</label><br>
+                <input type="number" value="$product.getPrice()" min="0" name="$product.getProductId()-price" step="0.01">
+            </div>
+        </div>
+    #end
+    <input type="submit" value="Confirm" class="hover_opacity" style="width: 100px">
+</form>
+#end

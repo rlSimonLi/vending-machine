@@ -1,0 +1,5 @@
+#parse("/gui/base.vm")
+#@mainLayout()
+<h1>Timeout</h1>
+<span>Operation timeout, please <a href="/">main page</a>.</span>
+#end

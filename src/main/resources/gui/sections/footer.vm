@@ -1,0 +1,11 @@
+<footer>
+    <h2>Vending Machine</h2>
+    <span><a href="https://github.com/rlSimonLi/vending-machine" class="hover_opacity">Project Repo</a></span><br>
+    <span>Icons used in the vending machine application are from <a href="https://fontawesome.com/"
+                                                                    class="hover_opacity">Font Awesome</a> (CC BY 4.0).</span>
+    #if($currentUser)
+        <br><span>You are logged in as: $currentUser.getName() ($currentUser.getUserGroupName())</span>
+    #else
+        <span>Demo login account: machinemaster/stockmaster/cashmaster password: password</span>
+    #end
+</footer>

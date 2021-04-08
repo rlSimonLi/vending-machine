@@ -1,0 +1,119 @@
+.card-payment-form input[type="submit"], .cash-payment-form input[type="submit"] {
+    background: none;
+    padding: 5px 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+
+}
+
+.card-payment-form input {
+    margin-bottom: 10px;
+    font-family: inherit;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.card-payment-form input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.invoice-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.invoice-item > .item-name {
+    flex: 1 1 auto;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.invoice-item > .item-total {
+    flex: 0 0 auto;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.invoice-item #item-quantity, .invoice-item #item-price {
+    font-size: 12px;
+}
+
+.invoice-title {
+    font-weight: 300;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.invoice-total-row {
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.invoice-total-desc {
+    flex: 1 1 auto;
+}
+
+.invoice-total-price {
+    flex: 0 0 auto
+}
+
+.invoice-divider {
+    border: 2px solid #000;
+}
+
+.checkout {
+    display: flex;
+    flex-direction: row;
+}
+
+.invoice {
+    flex: 1 1 auto;
+}
+
+.payment-sidebar {
+    width: 35%;
+    flex: 0 0 auto;
+    margin-left: 30px;
+}
+
+.card-detail {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-detail > div {
+    flex: 1 1 auto;
+}
+
+.banknote-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.banknote-cell {
+    flex: 1 1 auto;
+}
+
+.banknote-cell input {
+    margin: 0;
+    height: 100%;
+    width: 75px;
+    border-radius: 10px;
+    border: solid 1px #000;
+    font-size: 17px;
+    font-weight: 300;
+    text-align: center;
+    font-family: inherit;
+}
+
+.banknote-row {
+    margin-bottom: 30px;
+}

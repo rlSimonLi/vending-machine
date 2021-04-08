@@ -1,0 +1,92 @@
+#parse("/gui/base.vm")
+#@mainLayout()
+<h1>Checkout</h1><br>
+<div class="checkout">
+    <div class="invoice">
+        <h2 class="invoice-title">Your Order</h2>
+        <hr class="invoice-divider">
+        <div class="order-invoice">
+            #foreach($item in $order.getItems().keySet())
+                <div class="invoice-item">
+                    <div class="item-name">
+                        $item.getName() <span id="item-quantity">x$order.getQuantity($item)</span><br>
+                        <span id="item-price">$$item.getPriceString()</span>
+                    </div>
+                    <div class="item-total">$$order.getProductTotalPriceString($item)</div>
+                </div>
+            #end
+            <div class="invoice-total-row">
+                <div class="invoice-total-desc">Total</div>
+                <div class="invoice-total-price">$$order.getTotalPriceString()</div>
+            </div>
+        </div>
+    </div>
+    <div class="payment-sidebar">
+        <h2>Card Payment</h2>
+        <form action="" method="post" class="card-payment-form">
+            <input type="hidden" name="payment-method" value="card">
+            <div class="card-detail">
+                <div style="margin-right: 10px;"><label>Card Holder</label><br>
+                    <input type="text" name="cardholder" placeholder="Card Holder" value="" required>
+                </div>
+                <div>
+                    <label>Card Number</label><br>
+                    <input type="text" name="cardnumber" placeholder="Card Number" value="" required>
+                </div>
+            </div>
+            <br>
+            <input type="submit" value="Proceed" class="hover_opacity">
+        </form>
+
+        <h2>Cash Payment</h2>
+        <form action="" method="post" class="cash-payment-form">
+            <input type="hidden" name="payment-method" value="cash">
+            <div class="banknote-row">
+                <div class="banknote-cell">
+                    <label>1c</label><br>
+                    <input type="number" min="0" value="0" name="0.01" required>
+                </div>
+                <div class="banknote-cell">
+                    <label>10c</label><br>
+                    <input type="number" min="0" value="0" name="0.1" required>
+                </div>
+                <div class="banknote-cell">
+                    <label>20c</label><br>
+                    <input type="number" min="0" value="0" name="0.2" required>
+                </div>
+                <div class="banknote-cell">
+                    <label>50c</label><br>
+                    <input type="number" min="0" value="0" name="0.5" required>
+                </div>
+                <div class="banknote-cell">
+                    <label>$1</label><br>
+                    <input type="number" min="0" value="0" name="1.0" required>
+                </div>
+            </div>
+            <div class="banknote-row">
+                <div class="banknote-cell">
+                    <label>$2</label><br>
+                    <input type="number" min="0" value="0" name="2.0" required>
+                </div>
+                <div class="banknote-cell">
+                    <label>$5</label><br>
+                    <input type="number" min="0" value="0" name="5.0" required>
+                </div>
+                <div class="banknote-cell">
+                    <label>$10</label><br>
+                    <input type="number" min="0" value="0" name="10.0" required>
+                </div>
+                <div class="banknote-cell">
+                    <label>$20</label><br>
+                    <input type="number" min="0" value="0" name="20.0" required>
+                </div>
+                <div class="banknote-cell">
+                    <label>$50</label><br>
+                    <input type="number" min="0" value="0" name="50.0" required>
+                </div>
+            </div>
+            <input type="submit" value="Proceed" class="hover_opacity">
+        </form>
+    </div>
+</div>
+#end

@@ -1,0 +1,5 @@
+#parse("/gui/base.vm")
+#@mainLayout()
+<h1>Delete User: $user</h1>
+<span>Return to the <a href="/setting/owner">control panel</a>.</span>
+#end

@@ -1,0 +1,13 @@
+#parse("/gui/base.vm")
+#@mainLayout()
+<h1>Register</h1><br>
+<form action="" method="post" class="login-form">
+    <label>Username</label><br>
+    <input type="text" name="username" placeholder="username" value="" maxlength="15" required>
+    <br>
+    <label>Password</label><br>
+    <input type="password" name="password" placeholder="password" value="" minlength="8" maxlength="35" required>
+    <br>
+    <input type="submit" value="Register" class="hover_opacity">
+</form>
+#end

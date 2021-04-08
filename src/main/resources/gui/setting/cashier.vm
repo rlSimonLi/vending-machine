@@ -1,0 +1,13 @@
+#parse("/gui/base.vm")
+#@mainLayout()
+    <h1>Cashier Control Panel</h1>
+<form action="" class="cashier-form" method="post">
+    #foreach($note in $notes.keySet())
+        <div class="cashier-form-row">
+            <label>$$note Quantity</label><br>
+            <input type="number" min="0" value="$notes.get($note)" name="$note">
+        </div>
+    #end
+    <input type="submit" class="hover-opacity">
+</form>
+#end

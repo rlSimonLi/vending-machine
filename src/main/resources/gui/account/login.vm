@@ -1,0 +1,13 @@
+#parse("/gui/base.vm")
+#@mainLayout()
+<h1>Login</h1><br>
+<form action="" method="post" class="login-form">
+    <label>Username</label><br>
+    <input type="text" name="username" placeholder="username" value="" required>
+    <br>
+    <label>Password</label><br>
+    <input type="password" name="password" placeholder="password" value="" required>
+    <br>
+    <input type="submit" value="Login" class="hover_opacity">
+</form>
+#end

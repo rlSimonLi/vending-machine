@@ -1,0 +1,23 @@
+#parse("/gui/base.vm")
+#@mainLayout()
+    #if($currentHour >= 18)
+        #set($greeting = "Good evening")
+    #elseif($currentHour >= 12)
+        #set($greeting = "Good afternoon")
+    #elseif($currentHour >= 5)
+        #set($greeting = "Good morning")
+    #else
+        #set($greeting = "Good evening")
+    #end
+    #if($currentUser)
+    <h1>$greeting, $currentUser.getName()!</h1>
+    #else
+    <h1>$greeting!</h1>
+    #end
+<form action="" method="post" name="order_form">
+    <div class="index-wrapper">
+        #parse("/gui/index/index-main.vm")
+        #parse("/gui/index/index-sidebar.vm")
+    </div>
+</form>
+#end

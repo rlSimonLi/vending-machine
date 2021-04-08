@@ -1,0 +1,12 @@
+<div class="sidebar-section due-window">
+    <h2>Payment</h2>
+    #if($currentUser && $currentUser.getUserGroup() != $USERGROUP_CUSTOMER)
+        <span class="sidebar-message">Purchasing items is not available for your user group. Please logout to proceed as anonymous user or login with customer account.</span>
+    #else
+        <span id="amount-due-title">AMOUNT DUE</span><br>
+        <span id="amount-due"></span><br>
+        <div class="payment-methods">
+            <input type="submit" class="hover_opacity" value="Checkout">
+        </div>
+    #end
+</div>

@@ -1,0 +1,23 @@
+header {
+    flex-shrink: 0;
+    background: #000000;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: inherit;
+    padding: inherit;
+    width: 100%;
+    z-index: 9999;
+}
+
+.nav-element {
+    float: left;
+    display: block;
+    padding: 15px 20px;
+}
+
+.nav-element a {
+    text-decoration: none;
+    color: #ffffff;
+}

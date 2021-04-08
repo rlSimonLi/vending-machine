@@ -1,0 +1,66 @@
+.owner-register-form input[type="submit"] {
+    background: none;
+    padding: 5px 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.owner-register-form input[type="password"], .owner-register-form input[type="text"], .owner-register-form select, button {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+input, select {
+    margin-bottom: 50px;
+    font-family: inherit;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+table, td, th, tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td, th {
+    font-family: inherit;
+    font-size: 15px;
+    padding: 5px 15px;
+}
+
+.owner-register-form {
+    margin-bottom: 40px;
+}
+
+.stock-form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.stock-item-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.stock-item-col {
+    margin-right: 30px;
+}
+
+.stock-form input, .stock-form select, .cashier-form input {
+    border-radius: 10px;
+    border: solid 1px #000;
+    font-weight: 300;
+    text-align: center;
+    font-family: inherit;
+    padding: 10px 10px;
+}
+
+.cashier-form-row {
+    margin-top: 5px;
+}

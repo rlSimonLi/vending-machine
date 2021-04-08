@@ -1,0 +1,31 @@
+<header>
+    <nav>
+        <ul class="navbar">
+            <li class="nav-element hover_opacity">
+                <a href="/">Vending Machine</a>
+            </li>
+            <div class="right">
+                #if($currentUser)
+                    <li class="nav-element hover_opacity">
+                        #if($currentUser.getUserGroup() == $USERGROUP_OWNER)
+                            <a href="/setting/owner">$currentUser.getName()</a>
+                        #else
+                            <a href="/">$currentUser.getName()</a>
+                        #end
+
+                    </li>
+                    <li class="nav-element hover_opacity">
+                        <a href="/logout" title="Logout"><i class="fas fa-sign-out-alt"></i></a>
+                    </li>
+                #else
+                    <li class="nav-element hover_opacity">
+                        <a href="/login" title="Login"><i class="fas fa-sign-in-alt"></i></a>
+                    </li>
+                    <li class="nav-element hover_opacity">
+                        <a href="/register" title="Register"><i class="fas fa-user-plus"></i></a>
+                    </li>
+                #end
+            </div>
+        </ul>
+    </nav>
+</header>
