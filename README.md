@@ -9,7 +9,7 @@ This is a Java website project using [Spark](https://sparkjava.com/). You can bu
 - Seller: stockmaster/password
 - Cashier: cashmaster/password
 
-## Build and Deploya
+## Build and Deploy
 
 ```gradle build```
 
